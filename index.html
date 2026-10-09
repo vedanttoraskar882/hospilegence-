@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PassLedger AI — Decision Support & Intervention Intelligence for Hospitality</title>
+  <meta name="description" content="An AI decision-support platform in development for UK independent restaurants, pubs, bars, and small hospitality groups. Predict demand, compare costed options, and learn what works for your venue.">
+  <!-- Blank favicon strictly per requirements -->
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Ambient Gradient Light Glows -->
+  <div class="ambient-glow glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow glow-center" aria-hidden="true"></div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+
+  <!-- Skip Link for Accessibility -->
+  <a href="#home" class="skip-link">Skip to main content</a>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+      <!-- Clean Typography Brand Logo without Icon -->
+      <a href="#home" class="brand-logo" aria-label="PassLedger AI Home">
+        <span class="brand-text">PassLedger <span class="brand-accent">AI</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#platform" class="nav-link">Platform</a></li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#pricing" class="nav-link">Market Pricing</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="btn btn-sm btn-primary open-pilot-modal" data-source="header-cta">
+          Request a Pilot
+        </button>
+        <button type="button" class="mobile-menu-toggle" id="mobileMenuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="Toggle navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <ul class="mobile-nav-list">
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#platform" class="mobile-nav-link">Platform</a></li>
+        <li><a href="#how-it-works" class="mobile-nav-link">How It Works</a></li>
+        <li><a href="#pricing" class="mobile-nav-link">Market Pricing</a></li>
+        <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+      </ul>
+      <div class="mobile-nav-footer">
+        <button type="button" class="btn btn-primary btn-block open-pilot-modal" data-source="mobile-menu-cta">
+          Request a Pilot
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <!-- =====================================================================
+         1. HOME SECTION
+         ===================================================================== -->
+    <section class="section hero-section" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content" data-animate="fade-up">
+            <div class="status-badge-wrapper">
+              <span class="status-badge">
+                <span class="status-dot" aria-hidden="true"></span>
+                Prototype developed · Pilot recruitment
+              </span>
+            </div>
+
+            <h1 class="hero-title">
+              Turn every service into <span class="gradient-text">evidence for better decisions.</span>
+            </h1>
+
+            <p class="hero-description">
+              An AI decision-support platform in development for independent restaurants, pubs and bars. Forecast demand, compare costed options and build a record of what works for your venue—with the manager always in control.
+            </p>
+
+            <div class="hero-cta-group">
+              <button type="button" class="btn btn-primary btn-lg open-pilot-modal" data-source="hero-primary-cta">
+                Request a Pilot
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </button>
+              <a href="#platform" class="btn btn-secondary btn-lg">
+                Explore the Platform
+              </a>
+            </div>
+
+            <!-- Operating Loop Pill Ribbon -->
+            <div class="operating-loop-banner">
+              <span class="loop-label">Core Operating Loop:</span>
+              <div class="loop-steps-row">
+                <span class="loop-step">Predict</span>
+                <span class="loop-sep" aria-hidden="true">→</span>
+                <span class="loop-step">Explain</span>
+                <span class="loop-sep" aria-hidden="true">→</span>
+                <span class="loop-step">Recommend</span>
+                <span class="loop-sep" aria-hidden="true">→</span>
+                <span class="loop-step highlight">Decide</span>
+                <span class="loop-sep" aria-hidden="true">→</span>
+                <span class="loop-step">Measure</span>
+                <span class="loop-sep" aria-hidden="true">→</span>
+                <span class="loop-step">Learn</span>
+              </div>
+            </div>
+
+            <div class="hero-compliance-notice">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Designed to complement existing POS, bookings, rota and cellar systems—not replace them.</span>
+            </div>
+          </div>
+
+          <!-- Static Illustrative Daily Decision Brief Visual with Interactive Option Selector -->
+          <div class="hero-visual" data-animate="fade-up" data-delay="150">
+            <div class="mockup-frame">
+              <div class="mockup-header">
+                <div class="mockup-controls" aria-hidden="true">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="mockup-badge">
+                  <span class="disclaimer-chip">Illustrative interface — not live data</span>
+                </div>
+              </div>
+
+              <div class="brief-card">
+                <div class="brief-title-bar">
+                  <div>
+                    <span class="brief-kicker">DAILY DECISION BRIEF</span>
+                    <h2 class="brief-heading">Friday Dinner Service</h2>
+                  </div>
+                  <span class="brief-status-tag">Decide by 15:00</span>
+                </div>
+
+                <div class="brief-stats-grid">
+                  <div class="stat-cell">
+                    <span class="stat-caption">Demand Forecast</span>
+                    <span class="stat-value text-mint">285 ± 24 <span class="stat-unit">covers</span></span>
+                    <span class="stat-note">Historical + reservations signal</span>
+                  </div>
+                  <div class="stat-cell">
+                    <span class="stat-caption">Peak Service Pressure</span>
+                    <span class="stat-value text-amber">18:30 – 20:00</span>
+                    <span class="stat-note">High table turn rate projected</span>
+                  </div>
+                </div>
+
+                <div class="brief-context-row">
+                  <div class="context-item">
+                    <span class="context-icon" aria-hidden="true">🎵</span>
+                    <span><strong>Nearby Concert:</strong> ~4,200 attendees at venue within 0.4 miles</span>
+                  </div>
+                  <div class="context-item">
+                    <span class="context-icon" aria-hidden="true">🌤️</span>
+                    <span><strong>Weather:</strong> Dry evening forecast (19°C) · +15% patio walk-in likelihood</span>
+                  </div>
+                </div>
+
+                <div class="brief-options-section">
+                  <div class="options-header">
+                    <span class="options-title">Evaluated Staffing Interventions</span>
+                    <span class="options-subtitle">Trade-off: added labour cost vs service pressure</span>
+                  </div>
+
+                  <!-- Option A -->
+                  <div class="option-card option-featured" id="optionCardA" data-option="A">
+                    <div class="option-tag-row">
+                      <span class="option-badge">Option A</span>
+                      <span class="option-title-text">Add 6 staff hours from 17:00</span>
+                      <span class="option-cost">+£84 labour</span>
+                    </div>
+                    <p class="option-desc">Front-of-house cover reinforced early. Dampens peak floor pressure, safeguards table turns, minimal walk-in turnaway risk.</p>
+                    <div class="option-meta">
+                      <span class="badge-evidence evidence-b">Evidence Grade: B</span>
+                      <span class="badge-risk low">Pressure Risk: Low</span>
+                    </div>
+                  </div>
+
+                  <!-- Option B -->
+                  <div class="option-card" id="optionCardB" data-option="B">
+                    <div class="option-tag-row">
+                      <span class="option-badge">Option B</span>
+                      <span class="option-title-text">Add 3 staff hours from 18:00</span>
+                      <span class="option-cost">+£42 labour</span>
+                    </div>
+                    <p class="option-desc">Targeted support for 18:30 peak. Lower additional cost; moderate risk during opening rush if early arrivals surge.</p>
+                    <div class="option-meta">
+                      <span class="badge-evidence evidence-c">Evidence Grade: C</span>
+                      <span class="badge-risk medium">Pressure Risk: Moderate</span>
+                    </div>
+                  </div>
+
+                  <!-- Option C -->
+                  <div class="option-card" id="optionCardC" data-option="C">
+                    <div class="option-tag-row">
+                      <span class="option-badge">Option C</span>
+                      <span class="option-title-text">Keep the current rota</span>
+                      <span class="option-cost">£0 labour change</span>
+                    </div>
+                    <p class="option-desc">Protects short-term labour budget. High risk of 20+ minute ticket delays and compromised guest experience between 18:45–19:45.</p>
+                    <div class="option-meta">
+                      <span class="badge-evidence evidence-a">Baseline Rota</span>
+                      <span class="badge-risk high">Pressure Risk: High</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="brief-footer-actions">
+                  <span class="manager-control-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    Manager Action: Accept · Adjust · Ignore
+                  </span>
+                  <span class="brief-footnote">Illustrative values, not real customer results. Landing page does not execute live AI decisions.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         2. ABOUT SECTION
+         ===================================================================== -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header text-center" data-animate="fade-up">
+          <span class="section-kicker">About PassLedger AI</span>
+          <h2 class="section-title">Bridging Shift Floor Intuition with Decision Evidence</h2>
+          <p class="section-subtitle">
+            Hospitality operators face relentless volatility every service. PassLedger AI is built to record decisions, capture context, and measure what actually works.
+          </p>
+        </div>
+
+        <!-- Problem & Decision-Learning Narrative Bento -->
+        <div class="about-narrative-grid">
+          <div class="narrative-card" data-animate="fade-up">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <h3 class="narrative-title">The Operational Problem</h3>
+            <p class="narrative-text">
+              In busy restaurants and bars, managers make dozens of high-stakes operational choices under intense pressure: calling in extra staff, cutting shifts early, reconfiguring dining sections, or pushing perishable inventory. Yet these decisions remain disconnected from bookings and sales records. Knowledge stays trapped in individual heads—and vanishes whenever managers move on.
+            </p>
+          </div>
+
+          <div class="narrative-card" data-animate="fade-up" data-delay="100">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3 class="narrative-title">Our Decision-Learning Approach</h3>
+            <p class="narrative-text">
+              Forecasting alone doesn’t solve service friction. PassLedger AI focuses on the decision loop: presenting transparent operational choices, recording the manager's actual decision and override reasons, and measuring the outcome against expected baselines. Over time, the venue builds structured, durable evidence of which interventions genuinely succeed.
+            </p>
+          </div>
+        </div>
+
+        <!-- Key Pillars Grid -->
+        <div class="pillars-grid" data-animate="fade-up">
+          <div class="pillar-item">
+            <div class="pillar-bullet" aria-hidden="true">01</div>
+            <div>
+              <h4 class="pillar-name">Transparent Operational Choices</h4>
+              <p class="pillar-desc">Costed options with explicit assumptions, trade-offs, and confidence ranges rather than black-box instructions.</p>
+            </div>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-bullet" aria-hidden="true">02</div>
+            <div>
+              <h4 class="pillar-name">Manager Approval & Overrides</h4>
+              <p class="pillar-desc">The human manager always approves, modifies, or declines recommendations. Override rationales are recorded to inform future models.</p>
+            </div>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-bullet" aria-hidden="true">03</div>
+            <div>
+              <h4 class="pillar-name">Measured Outcomes vs Baselines</h4>
+              <p class="pillar-desc">Post-service debriefs compare realised covers, labour hours, and turnover against counterfactual baselines.</p>
+            </div>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-bullet" aria-hidden="true">04</div>
+            <div>
+              <h4 class="pillar-name">Preserved Venue Knowledge</h4>
+              <p class="pillar-desc">Institutional operating wisdom survives team turnover, ensuring incoming general managers inherit hard-won service playbooks.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Founder Profile Card (No profile photo / avatar added, per strict user instruction) -->
+        <div class="founder-card" data-animate="fade-up">
+          <div class="founder-header">
+            <div>
+              <div class="founder-badge-row">
+                <span class="founder-tag">Founder</span>
+                <span class="founder-award-tag">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="8" r="7"></circle>
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                  </svg>
+                  Best Front-of-House of the Year (Cubitt House sites)
+                </span>
+              </div>
+              <h3 class="founder-name">Deval Karnik</h3>
+              <p class="founder-role">Founder · Hospitality Operations & Product Definition</p>
+            </div>
+          </div>
+
+          <p class="founder-bio">
+            Deval is a London-based hospitality professional and Supervisor / closing manager at The Orange, Cubitt House, Belgravia. His perspective is grounded in live service reality: running entire shifts, coordinating high-volume covers (up to 250 covers per shift), leading 6–7 team leaders, floor planning, kitchen-to-floor coordination, wine upselling, staff training, and end-of-shift reconciliation.
+          </p>
+
+          <div class="founder-meta-grid">
+            <div class="meta-block">
+              <h4 class="meta-label">Education & Qualifications</h4>
+              <ul class="meta-list">
+                <li>MSc Responsible Tourism Management, Leeds Beckett University</li>
+                <li>Bachelor of Commerce (First Class with Distinction), Pune University</li>
+                <li>WSET Level 2 Award in Wines — in progress</li>
+              </ul>
+            </div>
+            <div class="meta-block">
+              <h4 class="meta-label">Founder Responsibilities & Team</h4>
+              <p class="meta-text">
+                Deval leads product definition, hospitality operational workflows, customer discovery, pilot recruitment and delivery, and commercial partnerships. Specialist engineers are planned to support technical implementation.
+              </p>
+            </div>
+          </div>
+
+          <div class="founder-disclaimer">
+            <p>
+              <strong>Context note:</strong> References to Deval’s employer describe his operational background on the floor. They do not imply that Cubitt House or The Orange is a customer, commercial partner, or endorser of PassLedger AI. Deval is not a software or machine-learning engineer. PassLedger AI is a working brand; name clearance and company structure remain to be confirmed.
+            </p>
+          </div>
+        </div>
+
+        <!-- Evidence & Prototype Evaluation Note -->
+        <div class="evidence-box" data-animate="fade-up">
+          <div class="evidence-header">
+            <div class="evidence-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h3 class="evidence-title">Historical Prototype Evaluation & Research Evidence</h3>
+              <p class="evidence-subtitle">Empirical findings from initial offline prototype diagnostic work</p>
+            </div>
+          </div>
+
+          <div class="evidence-stats-row">
+            <div class="evidence-stat-card">
+              <span class="evidence-stat-val">~13.6%</span>
+              <span class="evidence-stat-name">Revenue MAPE</span>
+              <span class="evidence-stat-sub">Evaluated on June 2026 holdout</span>
+            </div>
+            <div class="evidence-stat-card">
+              <span class="evidence-stat-val">~14.0%</span>
+              <span class="evidence-stat-name">Cover MAPE (Provisional)</span>
+              <span class="evidence-stat-sub">Reservations export appeared capped</span>
+            </div>
+            <div class="evidence-stat-card">
+              <span class="evidence-stat-val">20</span>
+              <span class="evidence-stat-name">Structured Responses</span>
+              <span class="evidence-stat-sub">Qualitative operator discovery survey</span>
+            </div>
+            <div class="evidence-stat-card">
+              <span class="evidence-stat-val">Jan–May 2026</span>
+              <span class="evidence-stat-name">Training Window</span>
+              <span class="evidence-stat-sub">Genuine Lightspeed POS & SevenRooms exports</span>
+            </div>
+          </div>
+
+          <p class="evidence-disclaimer">
+            <strong>Evidence Disclaimer:</strong> Forecast error metrics (MAPE) reflect offline retrospective model validation and do not constitute an accuracy guarantee. These findings do not establish proven live savings, production operational performance, or paying customer endorsements.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         3. PLATFORM SECTION
+         ===================================================================== -->
+    <section class="section platform-section" id="platform">
+      <div class="container">
+        <div class="section-header text-center" data-animate="fade-up">
+          <span class="section-kicker">Platform Architecture</span>
+          <h2 class="section-title">Nine Purpose-Built Modules for Hospitality Operations</h2>
+          <p class="section-subtitle">
+            From basic data hygiene to intervention learning and multi-site views, each module is designed around real shift constraints. Clearly labelled by development stage.
+          </p>
+        </div>
+
+        <!-- 9 Modules Grid -->
+        <div class="modules-grid">
+          <!-- Module 1 -->
+          <div class="module-card" data-animate="fade-up">
+            <div class="module-top">
+              <span class="module-number">01</span>
+              <span class="stage-badge stage-mvp">MVP Foundation</span>
+            </div>
+            <h3 class="module-title">Data Intake & Data Health</h3>
+            <p class="module-desc">
+              Imports CSVs and, as developed, authorised API data. Detects missing dates, duplicate transactions, capped reservation exports, and inconsistent service records. Excludes unnecessary personal guest information.
+            </p>
+            <div class="module-footer">
+              <span class="feature-tag">CSV / API Importers</span>
+              <span class="feature-tag">Health Diagnostics</span>
+            </div>
+          </div>
+
+          <!-- Module 2 -->
+          <div class="module-card" data-animate="fade-up" data-delay="60">
+            <div class="module-top">
+              <span class="module-number">02</span>
+              <span class="stage-badge stage-mvp">MVP</span>
+            </div>
+            <h3 class="module-title">Demand, Footfall & External Signals</h3>
+            <p class="module-desc">
+              Forecasts covers, walk-ins, sales, and 15-minute pressure windows using historical service data, bookings, local events, and weather forecasts. Displays uncertainty ranges alongside clear driver explanations.
+            </p>
+            <div class="module-footer">
+              <span class="feature-tag">15-min Pressure Curves</span>
+              <span class="feature-tag">Weather & Events</span>
+            </div>
+          </div>
+
+          <!-- Module 3 -->
+          <div class="module-card" data-animate="fade-up" data-delay="120">
+            <div class="module-top">
+              <span class="module-number">03</span>
+              <span class="stage-badge stage-mvp">MVP</span>
+            </div>
+            <h3 class="module-title">Decision Ledger & Daily Brief</h3>
+            <p class="module-desc">
+              Presents service forecasts and two to four operational options. Records Accept, Adjust, or Ignore decisions, captures manager override reasons, logs the actual implemented actions, and pairs them with post-shift outcomes.
+            </p>
+            <div class="module-footer">
+              <span class="feature-tag">Accept / Adjust / Ignore</span>
+              <span class="feature-tag">Override Capture</span>
+            </div>
+          </div>
+
+          <!-- Module 4 -->
+          <div class="module-card" data-animate="fade-up">
+            <div class="module-top">
+              <span class="module-number">04</span>
+              <span class="stage-badge stage-pilot">Initial Staffing Pilot</span>
+            </div>
+            <h3 class="module-title">Notice-Aware Labour Engine</h3>
+            <p class="module-desc">
+              Compares staffing options using configurable notice windows, decide-by deadlines, and potential late-change costs. (Guaranteed-hours exposure tracking is a planned expansion. Does not provide legal advice or statutory compliance claims).
+            </p>
+            <div class="module-footer">
+              <span class="feature-tag">Decide-by Clocks</span>
+              <span class="feature-tag">Notice Windows</span>
+            </div>
+          </div>
+
+          <!-- Module 5 -->
+          <div class="module-card" data-animate="fade-up" data-delay="60">
+            <div class="module-top">
+              <span class="module-number">05</span>
+              <span class="stage-badge stage-pilot">Initial Version · Expansion</span>
+            </div>
+            <h3 class="module-title">Service Twin & Consequence Engine</h3>
+            <p class="module-desc">
+              Simulates service under different staffing options using arrivals, venue capacity, dwell time, and staffing assumptions. Compares labour cost, service pressure, and lost-cover risks. (Detailed kitchen & table-turn modelling is future work).
+            </p>
+            <div class="module-footer">
+              <span class="feature-tag">Pressure Simulation</span>
+              <span class="feature-tag">Consequence Cards</span>
+            </div>
+          </div>
+
+          <!-- Module 6 -->
+          <div class="module-card" data-animate="fade-up" data-delay="120">
+            <div class="module-top">
+              <span class="module-number">06</span>
+              <span class="stage-badge stage-future">Phase 2 — Planned</span>
+            </div>
+            <h3 class="module-title">Perishable-to-Plate</h3>
+            <p class="module-desc">
+              Links ingredient expiry risk to preparation changes, daily specials, front-of-house upselling, and future prep ordering. Evaluates and measures sell-through, avoidable food waste, margin impact, and kitchen prep pressure.
+            </p>
+            <div class="module-footer">
+              <span class="feature-tag">Expiry Tracking</span>
+              <span class="feature-tag">Specials Pairing</span>
+            </div>
+          </div>
+
+          <!-- Module 7 -->
+          <div class="module-card" data-animate="fade-up">
+            <div class="module-top">
+              <span class="module-number">07</span>
+              <span class="stage-badge stage-future">Phase 2 — Planned</span>
+            </div>
+            <h3 class="module-title">Cellar Capital Release</h3>
+            <p class="module-desc">
+              Identifies dormant wine and bar stock tied up in storage. Evaluates by-the-glass listings, curated food pairings, staff incentive targets, price adjustments, and supplier returns against sales velocity and profit margin.
+            </p>
+            <div class="module-footer">
+              <span class="feature-tag">Dead Stock Liquidation</span>
+              <span class="feature-tag">By-the-Glass Recs</span>
+            </div>
+          </div>
+
+          <!-- Module 8 -->
+          <div class="module-card" data-animate="fade-up" data-delay="60">
+            <div class="module-top">
+              <span class="module-number">08</span>
+              <span class="stage-badge stage-future">Phase 2–3 — Planned</span>
+            </div>
+            <h3 class="module-title">Intervention Learning & Peer Priors</h3>
+            <p class="module-desc">
+              Builds on matched-comparison estimates with venue-specific effect learning, A–D evidence confidence badges, and anonymised comparable-venue priors. Proactively withholds strong recommendations whenever empirical evidence is weak.
+            </p>
+            <div class="module-footer">
+              <span class="feature-tag">A–D Evidence Badges</span>
+              <span class="feature-tag">Matched Baselines</span>
+            </div>
+          </div>
+
+          <!-- Module 9 -->
+          <div class="module-card" data-animate="fade-up" data-delay="120">
+            <div class="module-top">
+              <span class="module-number">09</span>
+              <span class="stage-badge stage-future">Phase 3 — Planned</span>
+            </div>
+            <h3 class="module-title">Multi-Venue & Live Integrations</h3>
+            <p class="module-desc">
+              Multi-site group overview dashboards, role-based access permissions, monitored automated connectors, and direct API integrations with leading hospitality enterprise systems across 1–15 sites.
+            </p>
+            <div class="module-footer">
+              <span class="feature-tag">Group Rollups</span>
+              <span class="feature-tag">Connector Monitoring</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Planned Interface Feature Badges Strip -->
+        <div class="planned-features-box" data-animate="fade-up">
+          <h3 class="planned-features-title">Planned Operational Interface Features</h3>
+          <p class="planned-features-intro">
+            A tool built for busy shift managers on mobile and tablet devices during service setup:
+          </p>
+          <div class="chips-cloud">
+            <span class="feature-chip">Consequence Comparison Cards</span>
+            <span class="feature-chip">Accept / Adjust / Ignore Flow</span>
+            <span class="feature-chip">Override Reason Capture</span>
+            <span class="feature-chip">A–D Evidence Badges</span>
+            <span class="feature-chip">Decide-by Clocks</span>
+            <span class="feature-chip">In-Service Pulse Alerts</span>
+            <span class="feature-chip">Short Post-Service Debriefs</span>
+            <span class="feature-chip">Voice-Note Tagging</span>
+            <span class="feature-chip">Data-Health Scores</span>
+            <span class="feature-chip">What-Worked Historical Reports</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         4. HOW IT WORKS SECTION
+         ===================================================================== -->
+    <section class="section how-it-works-section" id="how-it-works">
+      <div class="container">
+        <div class="section-header text-center" data-animate="fade-up">
+          <span class="section-kicker">Operational Workflow</span>
+          <h2 class="section-title">The Six-Stage Operating Loop</h2>
+          <p class="section-subtitle">
+            How PassLedger AI integrates into daily hospitality shifts to transform raw service data into actionable, venue-specific evidence.
+          </p>
+        </div>
+
+        <!-- 6 Numbered Steps Grid -->
+        <div class="steps-grid">
+          <!-- Step 1 -->
+          <div class="step-card" data-animate="fade-up">
+            <div class="step-badge">1</div>
+            <h3 class="step-title">Predict</h3>
+            <p class="step-body">
+              Validate venue history, reservation books, local calendar events, and weather forecasts to project the upcoming shift’s demand curves with clear uncertainty ranges.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card" data-animate="fade-up" data-delay="50">
+            <div class="step-badge">2</div>
+            <h3 class="step-title">Explain</h3>
+            <p class="step-body">
+              Translate underlying statistical signals into plain-English demand drivers: why covers are anticipated to peak, which sections face pressure, and what assumptions are applied.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card" data-animate="fade-up" data-delay="100">
+            <div class="step-badge">3</div>
+            <h3 class="step-title">Recommend</h3>
+            <p class="step-body">
+              Present two to four feasible, costed operational choices (e.g., call in extra runner, flex section rota, push specials) with transparent trade-offs and evidence strength.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step-card step-highlight" data-animate="fade-up" data-delay="150">
+            <div class="step-badge">4</div>
+            <h3 class="step-title">Decide</h3>
+            <p class="step-body">
+              <strong>The manager always retains the final decision.</strong> Choose to Accept, Adjust, or Ignore recommendations, and record the rationale and actual implemented action.
+            </p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="step-card" data-animate="fade-up" data-delay="200">
+            <div class="step-badge">5</div>
+            <h3 class="step-title">Measure</h3>
+            <p class="step-body">
+              Capture actual covers served, actual labour hours clocked, realised turnover pace, beverage sales velocity, and avoidable waste after the service wraps up.
+            </p>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="step-card" data-animate="fade-up" data-delay="250">
+            <div class="step-badge">6</div>
+            <h3 class="step-title">Learn</h3>
+            <p class="step-body">
+              Compare observed outcomes against expected baselines and update future recommendations. Over time, the model adapts to your venue's unique kitchen and floor dynamics.
+            </p>
+          </div>
+        </div>
+
+        <!-- Causality Callout -->
+        <div class="causality-callout" data-animate="fade-up">
+          <div class="causality-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+          </div>
+          <div class="causality-content">
+            <h4 class="causality-title">Statistical Rigour & Correlation vs Causality</h4>
+            <p class="causality-text">
+              In live restaurant operations, a favourable outcome following an operational action does not, by itself, prove that the action caused the improvement. External factors—such as unexpected walk-ins, weather shifts, or unrecorded events—routinely influence service performance. PassLedger AI uses matched baselines and cautious evidence grading to avoid false attribution.
+            </p>
+          </div>
+        </div>
+
+        <!-- Proposed Pilot Journey Timeline -->
+        <div class="pilot-journey-block" data-animate="fade-up">
+          <div class="journey-header">
+            <span class="journey-kicker">COLLABORATION PROCESS</span>
+            <h3 class="journey-title">Proposed Pilot Journey</h3>
+            <p class="journey-subtitle">A phased, low-friction pathway from initial qualification to live staffing validation.</p>
+          </div>
+
+          <div class="journey-steps">
+            <div class="journey-step-item">
+              <div class="journey-marker">1</div>
+              <div class="journey-card">
+                <span class="journey-duration">15 Minutes</span>
+                <h4 class="journey-card-title">Initial Qualification</h4>
+                <p class="journey-card-text">Quick review of venue type, site count (1–15 sites), existing POS and reservations systems, and key operational pain points.</p>
+              </div>
+            </div>
+
+            <div class="journey-step-item">
+              <div class="journey-marker">2</div>
+              <div class="journey-card">
+                <span class="journey-duration">Stage 2</span>
+                <h4 class="journey-card-title">Data-Readiness & DPA</h4>
+                <p class="journey-card-text">Audit of data hygiene, export compatibility, and execution of a robust Data-Processing Agreement (DPA) prioritizing data minimisation.</p>
+              </div>
+            </div>
+
+            <div class="journey-step-item">
+              <div class="journey-marker">3</div>
+              <div class="journey-card highlight-free">
+                <span class="journey-duration">2–4 Weeks · Free</span>
+                <h4 class="journey-card-title">Setup & Historical Diagnostic</h4>
+                <p class="journey-card-text">Backtesting models against historical exports to calculate venue baseline error and identify historical rota mismatch windows. Provided free of charge.</p>
+              </div>
+            </div>
+
+            <div class="journey-step-item">
+              <div class="journey-marker">4</div>
+              <div class="journey-card highlight-paid">
+                <span class="journey-duration">4–8 Weeks · Paid</span>
+                <h4 class="journey-card-title">Live Staffing Pilot</h4>
+                <p class="journey-card-text">Daily decision briefs delivered prior to shifts. General managers review, accept, or override staffing options in real-world service.</p>
+              </div>
+            </div>
+
+            <div class="journey-step-item">
+              <div class="journey-marker">5</div>
+              <div class="journey-card">
+                <span class="journey-duration">Post-Pilot</span>
+                <h4 class="journey-card-title">Outcome Review & Adoption</h4>
+                <p class="journey-card-text">Comprehensive review of measured outcomes, manager override trends, and staff adoption. Potential conversion to ongoing subscription where appropriate.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         5. MARKET PRICING SECTION
+         ===================================================================== -->
+    <section class="section pricing-section" id="pricing">
+      <div class="container">
+        <div class="section-header text-center" data-animate="fade-up">
+          <span class="section-kicker">Market Pricing</span>
+          <h2 class="section-title">Transparent, Venue-Based Pricing</h2>
+          <p class="section-subtitle">
+            Predictable monthly pricing designed for independent operators and small multi-site hospitality groups.
+          </p>
+          <div class="pricing-disclaimer-banner">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span>These prices are illustrative planning assumptions from the business plan, not market-tested prices or confirmed launch offers. All numerical prices are GBP per venue per month.</span>
+          </div>
+        </div>
+
+        <!-- Pricing Cards Grid -->
+        <div class="pricing-grid">
+          <!-- Card 1: Founding Venue Pilot -->
+          <div class="pricing-card pilot-tier" data-animate="fade-up">
+            <div class="tier-badge">Time-Limited</div>
+            <h3 class="tier-name">FOUNDING VENUE — PILOT</h3>
+            <p class="tier-tagline">For forward-thinking operators joining early stage live validation.</p>
+            <div class="tier-price-box">
+              <span class="price-amount">£99–£149</span>
+              <span class="price-period">per venue/month</span>
+            </div>
+            <ul class="tier-features-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Forecast</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>External signals</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Decision brief</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Structured feedback</span>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-secondary btn-block open-pilot-modal" data-source="pricing-founding-venue">
+              Request a Pilot
+            </button>
+          </div>
+
+          <!-- Card 2: Core -->
+          <div class="pricing-card" data-animate="fade-up" data-delay="50">
+            <h3 class="tier-name">CORE</h3>
+            <p class="tier-tagline">Essential decision ledger for single-venue restaurants and bars.</p>
+            <div class="tier-price-box">
+              <span class="price-amount">£199</span>
+              <span class="price-period">per venue/month</span>
+            </div>
+            <ul class="tier-features-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>V1/V2 forecasts</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Daily brief</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Options</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Decision ledger</span>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-secondary btn-block open-pilot-modal" data-source="pricing-core">
+              Request a Pilot
+            </button>
+          </div>
+
+          <!-- Card 3: Operations -->
+          <div class="pricing-card" data-animate="fade-up" data-delay="100">
+            <h3 class="tier-name">OPERATIONS</h3>
+            <p class="tier-tagline">Dynamic rota analysis and perishable inventory optimisation.</p>
+            <div class="tier-price-box">
+              <span class="price-amount">£299</span>
+              <span class="price-period">per venue/month</span>
+            </div>
+            <ul class="tier-features-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Everything in Core</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Notice-aware labour engine</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Service Twin</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Perishable-to-Plate</span>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-primary btn-block open-pilot-modal" data-source="pricing-operations">
+              Request a Pilot
+            </button>
+          </div>
+
+          <!-- Card 4: Intelligence -->
+          <div class="pricing-card" data-animate="fade-up" data-delay="150">
+            <h3 class="tier-name">INTELLIGENCE</h3>
+            <p class="tier-tagline">Advanced cellar capital release and cross-venue peer priors.</p>
+            <div class="tier-price-box">
+              <span class="price-amount">£399</span>
+              <span class="price-period">per venue/month</span>
+            </div>
+            <ul class="tier-features-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Everything in Operations</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Cellar Capital Release</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Evidence dashboards</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Peer priors</span>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-secondary btn-block open-pilot-modal" data-source="pricing-intelligence">
+              Request a Pilot
+            </button>
+          </div>
+
+          <!-- Card 5: Multi-Site -->
+          <div class="pricing-card multisite-tier" data-animate="fade-up" data-delay="200">
+            <div class="tier-badge enterprise">Small Groups</div>
+            <h3 class="tier-name">MULTI-SITE</h3>
+            <p class="tier-tagline">Tailored multi-unit deployment for groups operating 2–15 venues.</p>
+            <div class="tier-price-box">
+              <span class="price-amount custom">Custom</span>
+              <span class="price-period">pricing</span>
+            </div>
+            <ul class="tier-features-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Group dashboards</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>API integrations</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Onboarding</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Support</span>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-secondary btn-block open-pilot-modal" data-source="pricing-multisite">
+              Discuss Multi-site
+            </button>
+          </div>
+        </div>
+
+        <div class="pricing-clarification-note" data-animate="fade-up">
+          <p>
+            Features will be introduced in stages. A setup fee may apply to complex multi-site deployments; no fixed setup fee is specified.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         6. FAQ SECTION
+         ===================================================================== -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-header text-center" data-animate="fade-up">
+          <span class="section-kicker">Frequently Asked Questions</span>
+          <h2 class="section-title">Clear, Transparent Answers</h2>
+          <p class="section-subtitle">
+            Everything you need to know about our approach, data handling, and pilot process.
+          </p>
+        </div>
+
+        <div class="faq-accordion-wrapper" role="region" aria-label="Frequently Asked Questions Accordion" data-animate="fade-up">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-1" id="faq-q-1">
+              <span>1. Who is PassLedger AI designed for?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer-panel" id="faq-ans-1" role="region" aria-labelledby="faq-q-1" hidden>
+              <div class="faq-answer-inner">
+                PassLedger AI is designed for UK independent restaurants, pubs, bars, and small hospitality groups operating between 1 and 15 sites. Our primary users are owner-operators, general managers, operations leads of small hospitality groups, and bar or beverage managers who currently make high-stakes operational choices under intense shift pressure.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-2" id="faq-q-2">
+              <span>2. Does it replace my existing POS or rota tools?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer-panel" id="faq-ans-2" role="region" aria-labelledby="faq-q-2" hidden>
+              <div class="faq-answer-inner">
+                No. PassLedger AI does not replace your POS, reservations system, rota software, or cellar stock management platforms. It acts as an intelligence and decision-support layer that sits on top of your existing tools, synthesizing booking curves, sales data, and external signals into actionable shift options.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-3" id="faq-q-3">
+              <span>3. Is the full platform available today?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer-panel" id="faq-ans-3" role="region" aria-labelledby="faq-q-3" hidden>
+              <div class="faq-answer-inner">
+                No. PassLedger AI is currently in active prototype and pilot recruitment stage. We have validated retrospective demand models on historical POS and reservation exports. The platform's modules are scheduled to roll out in stages, starting with the MVP intake, demand forecasting, and decision brief, followed by live staffing pilots and subsequent inventory modules.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-4" id="faq-q-4">
+              <span>4. Does the manager keep the final decision?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer-panel" id="faq-ans-4" role="region" aria-labelledby="faq-q-4" hidden>
+              <div class="faq-answer-inner">
+                Always. PassLedger AI is an AI copilot, not an autonomous system. The manager on duty retains complete operational authority to Accept, Adjust, or Ignore any recommendation. The platform captures the manager's override rationale and actual decision so that future recommendations improve.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-5" id="faq-q-5">
+              <span>5. What happens when evidence is limited?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer-panel" id="faq-ans-5" role="region" aria-labelledby="faq-q-5" hidden>
+              <div class="faq-answer-inner">
+                The platform is designed with explicit epistemic caution. Every recommendation displays an evidence badge (grades A through D). When data is noisy, sample sizes are small, or counterfactual confidence is low, the platform withholds assertive recommendations and clearly alerts the manager that evidence is limited.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-6" id="faq-q-6">
+              <span>6. How long is the proposed pilot?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer-panel" id="faq-ans-6" role="region" aria-labelledby="faq-q-6" hidden>
+              <div class="faq-answer-inner">
+                The proposed pilot journey comprises a 15-minute qualification, data-readiness review and DPA, followed by approximately 2–4 weeks of setup and historical diagnostic (which is free of charge), and a 4–8-week live staffing pilot (which is paid). After this period, measured outcomes and manager adoption are formally reviewed.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-7" id="faq-q-7">
+              <span>7. What data is needed?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer-panel" id="faq-ans-7" role="region" aria-labelledby="faq-q-7" hidden>
+              <div class="faq-answer-inner">
+                To generate initial service forecasts and labour recommendations, we require historical sales exports (item sales, covers, transaction timestamps from POS), reservation logs (booking lead times, party sizes, seating areas), and baseline rota schedules. As developed, authorized API connectors will simplify this flow.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-8" id="faq-q-8">
+              <span>8. How is privacy approached?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer-panel" id="faq-ans-8" role="region" aria-labelledby="faq-q-8" hidden>
+              <div class="faq-answer-inner">
+                Privacy is designed around strict data minimisation: we intentionally exclude guest personal identifying information and contact details, anonymise employee names to role identifiers, and plan encrypted transmission, tenant separation, role-based access controls, and a comprehensive data-processing agreement (DPA) prior to live pilots. Note: these represent our planned architectural principles rather than certified, completed infrastructure.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 9 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-9" id="faq-q-9">
+              <span>9. Are the prices final, and are savings proven?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer-panel" id="faq-ans-9" role="region" aria-labelledby="faq-q-9" hidden>
+              <div class="faq-answer-inner">
+                No. The published pricing figures (£99–£149 pilot, £199 Core, £299 Operations, £399 Intelligence) represent illustrative planning assumptions from our business plan, not market-tested quotes or binding launch commitments. Historical prototype error rates (~13.6% revenue MAPE, ~14.0% cover MAPE) demonstrate diagnostic feasibility on historical data, but do not constitute guaranteed savings or live performance commitments.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 10 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-10" id="faq-q-10">
+              <span>10. What happens when I submit the pilot form?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer-panel" id="faq-ans-10" role="region" aria-labelledby="faq-q-10" hidden>
+              <div class="faq-answer-inner">
+                Because this website is a frontend-only prototype demonstration, submitting the form saves your entered details exclusively to your local browser storage (localStorage). It does not transmit an email, contact our team over a network, or create an automated booking.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       7. FOOTER SECTION
+       ===================================================================== -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <!-- Clean Typography Brand Logo without Icon -->
+          <a href="#home" class="brand-logo footer-logo" aria-label="PassLedger AI Home">
+            <span class="brand-text">PassLedger <span class="brand-accent">AI</span></span>
+          </a>
+          <p class="footer-tagline">
+            Decision support and intervention intelligence for UK independent restaurants, pubs, bars, and small hospitality groups.
+          </p>
+          <div class="footer-dev-badge">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            Platform in active development · Pilot recruitment stage
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#platform">Platform</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#pricing">Market Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-cta-col">
+          <h4 class="footer-heading">Join the Pilot</h4>
+          <p class="footer-cta-text">
+            Interested in exploring decision intelligence for your venue? Register interest for upcoming testing cohorts.
+          </p>
+          <button type="button" class="btn btn-primary open-pilot-modal" data-source="footer-cta">
+            Request a Pilot
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="footer-copyright">
+          © 2026 PassLedger AI. Working brand · All rights reserved. Name clearance and corporate formation pending confirmation.
+        </p>
+        <p class="footer-browser-note">
+          Frontend-only browser prototype. No backend, database, or tracking services connected.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       REQUEST A PILOT MODAL (WORKING LOCALSTORAGE)
+       ===================================================================== -->
+  <div class="modal-overlay" id="pilotModalOverlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pilotModalTitle">
+    <div class="modal-container" id="pilotModalContainer">
+      <div class="modal-header">
+        <div>
+          <span class="modal-kicker">PILOT RECRUITMENT</span>
+          <h2 class="modal-title" id="pilotModalTitle">Request a Pilot</h2>
+        </div>
+        <button type="button" class="modal-close-btn" id="closePilotModalBtn" aria-label="Close Request a Pilot modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Live Notification Banner (Errors or Success) -->
+      <div id="modalAlertBox" class="alert-box" role="alert" aria-live="polite" hidden></div>
+
+      <!-- Pilot Form with Clean Neutral Inputs without pre-entered style dummy data -->
+      <form id="pilotForm" class="pilot-form" novalidate>
+        <div class="form-group">
+          <label for="fullName" class="form-label">
+            Full Name <span class="required-star" aria-hidden="true">*</span>
+          </label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            class="form-input"
+            placeholder="Full name"
+            autocomplete="name"
+            required
+            aria-required="true"
+          >
+          <span class="field-error" id="fullNameError" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="phoneNumber" class="form-label">
+            Phone Number <span class="required-star" aria-hidden="true">*</span>
+          </label>
+          <input
+            type="tel"
+            id="phoneNumber"
+            name="phoneNumber"
+            class="form-input"
+            placeholder="Phone number (e.g. +44)"
+            autocomplete="tel"
+            required
+            aria-required="true"
+          >
+          <span class="field-error" id="phoneNumberError" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="emailAddress" class="form-label">
+            Email Address <span class="required-star" aria-hidden="true">*</span>
+          </label>
+          <input
+            type="email"
+            id="emailAddress"
+            name="emailAddress"
+            class="form-input"
+            placeholder="Work email address"
+            autocomplete="email"
+            required
+            aria-required="true"
+          >
+          <span class="field-error" id="emailAddressError" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="organisationName" class="form-label">
+            Organisation Name <span class="required-star" aria-hidden="true">*</span>
+          </label>
+          <input
+            type="text"
+            id="organisationName"
+            name="organisationName"
+            class="form-input"
+            placeholder="Restaurant or group name"
+            autocomplete="organization"
+            required
+            aria-required="true"
+          >
+          <span class="field-error" id="organisationNameError" aria-live="polite"></span>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary btn-block" id="pilotSubmitBtn">
+            <span>Save Pilot Interest</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </form>
+
+      <!-- Submissions Count & Diagnostic Viewer in LocalStorage -->
+      <div class="modal-storage-info">
+        <div class="storage-info-header">
+          <span class="storage-counter" id="storageSubmissionsCount">0 saved submissions in this browser</span>
+          <button type="button" class="btn-text" id="toggleStoredListBtn">View Stored Records</button>
+        </div>
+        <div class="stored-records-drawer" id="storedRecordsDrawer" hidden>
+          <div class="stored-records-list" id="storedRecordsList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
