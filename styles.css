@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PASSLEDGER AI — REDESIGNED PREMIUM STYLESHEET
+   HOSPILEGENCE — PREMIUM STYLESHEET
    Aesthetic: Contemporary Hospitality SaaS (Deep Navy / Soft Mint / Restrained Amber)
    Enhanced with smooth scroll animations, glassmorphism, and responsive hierarchy.
    ========================================================================== */
@@ -2385,4 +2385,24 @@ img, svg {
   .pulse-dot {
     animation: none;
   }
+}
+
+/* Notice Banner in Modal */
+.modal-notice-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(56, 217, 169, 0.08);
+  border: 1px solid var(--mint-border);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font-size: 0.8125rem;
+  color: var(--mint-light);
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.modal-notice-banner svg {
+  flex-shrink: 0;
+  color: var(--mint-primary);
 }

@@ -1,5 +1,5 @@
 /**
- * PassLedger AI — Frontend Application Script
+ * Hospilegence — Frontend Application Script
  * Strictly frontend-only; operates entirely in browser with zero server/API dependencies.
  * Uses localStorage key 'passledgerAI_pilotSubmissions' per exact specification.
  */
